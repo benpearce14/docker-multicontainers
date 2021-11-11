@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "${{ secrets.DOCKER_USERNAME }}/multi-client"
+    image: "benjaminpearce/multi-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "${{ secrets.DOCKER_USERNAME }}/multi-server"
+    image: "benjaminpearce/multi-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "${{ secrets.DOCKER_USERNAME }}/multi-worker"
+    image: "benjaminpearce/multi-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "${{ secrets.DOCKER_USERNAME }}/multi-nginx"
+    image: "benjaminpearce/multi-nginx"
     mem_limit: 128m
     hostname: nginx
     ports:
