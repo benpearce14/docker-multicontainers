@@ -1,4 +1,4 @@
-name: docker-multicontainer
+name: docker-multicontainers
 on:
   push:
     branches:
