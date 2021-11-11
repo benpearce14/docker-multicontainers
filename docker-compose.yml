@@ -4,8 +4,8 @@ services:
     image: "benjaminpearce/multi-client"
     mem_limit: 128m
     hostname: client
-  server:
-    image: "benjaminpearce/multi-server"
+  api:
+    image: "benjaminpearce/multi-api"
     mem_limit: 128m
     hostname: api
     environment:
