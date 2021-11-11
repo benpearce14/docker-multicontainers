@@ -1,4 +1,4 @@
-# docker-multicontainers
+# Docker Multicontainers in Action
 
 Simple setup of a multicontainer application using Docker.
 
